@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    max-width: 60vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+
+}
+a{
+    text-decoration: none;
+}
+.card_image{
+    height: 600px;
+    width: 400px;
+}
+.headerContainer{
+    margin-bottom: 2.8rem;
+}
+.headerTitle{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+.headerDescription{
+    max-width: 568px;
+    text-align: center;
+    color: rgb(45, 44, 44);
+    margin: 0 auto;
+}
+.mainContainer{
+    display: grid;
+    row-gap: 1.5rem !important;
+    column-gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 0;
+}
+@media (min-width:650px){
+    .mainContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width:1032px){
+    .mainContainer{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1340px){
+    .mainContainer{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 100%;
+    gap: 0px;
+    border: 1px solid rgb(45, 44, 44);
+    border-radius: 10px;
+    /* padding: 10px; */
+    
+}
+.cardContainer:hover .card_image{
+    
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+.cardImageContainer{
+    position: relative;
+    overflow: hidden;
+    height: 16rem;
+}
+@media (min-width:768){
+    .cardImageContainer{
+        height: 20rem;
+    }
+}
+.card_image{
+    object-fit: cover;
+    object-position: center;
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+.cardTitleContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.card_title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(34, 11, 11);
+    line-height: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+.cardTitleAnchor:hover .card_title{
+    color: rgba(43, 43, 133, 0.918);
+}
+.card_desc{
+    color: rgb(45, 44, 44);
+    font-size: 1rem;
+}
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.15rem;
+    padding-bottom: 1.5rem;
+}
+.author_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: rgb(200, 193, 193);
+}
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+}
+.authorName{
+    color: rgb(45, 45, 179);
+    white-space: nowrap;
+}
+.authorDate{
+    color: rgb(90, 85, 85);
+}
+.card_tag_container{
+    font-size: 0.7rem;
+    border: 1px solid rgb(142, 140, 140);
+    border-radius: 2px;
+    margin: 1.5rem;
+    padding: 0.25rem;
+}
